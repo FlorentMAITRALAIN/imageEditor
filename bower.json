@@ -1,0 +1,33 @@
+{
+  "name": "imageEditor",
+  "homepage": "http://maitralain.fr",
+  "description": "Javascript plugin for image edition",
+  "main": [
+    "dist/imageEditor.js",
+    "dist/imageEditor.js"
+  ],
+  "keywords": [
+    "image",
+    "crop",
+    "cropping",
+    "move",
+    "zoom",
+    "rotate",
+    "scale",
+    "cropper",
+    "cropperjs",
+    "cropper.js",
+    "html",
+    "css",
+    "javascript",
+    "front-end",
+    "web",
+    "development"
+  ],
+  "homepage": "http://maitralain.fr/imageEditor",
+  "authors": [
+    "Florent MAITRALAIN"
+  ],
+  "license": "MIT",
+  "private": true
+}

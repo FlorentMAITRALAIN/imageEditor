@@ -1,0 +1,68 @@
+{
+  "name": "imageeditor",
+  "version": "1.0.0",
+  "description": "Javascript plugin for image edition",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "postcss -c postcss.config.json",
+    "build:js": "rollup -c",
+    "build": "npm run build:css && npm run build:js",
+    "compress:css": "postcss -u cssnano dist/imageeditor.css -o dist/imageeditor.min.css",
+    "compress:js": "uglifyjs dist/imageeditor.js -o dist/imageeditor.min.js -c -m --comments /^!/",
+    "compress": "npm run compress:css && npm run compress:js",
+    "watch:css": "postcss -c postcss.config.json -w",
+    "watch:js": "rollup -c -w -m",
+    "lint": "eslint src/js",
+    "postbuild": "npm run compress && node build",
+    "prebuild": "npm run lint && npm test",
+    "start": "npm-run-all --parallel watch:*",
+    "test": "node-qunit-phantomjs test/index.html"
+  },
+  "author": {
+    "name": "Florent MAITRALAIN",
+    "url": "http://maitralain.fr"
+  },
+  "license": "MIT",
+  "repository": "FlorentMAITRALAIN/imageEdito",
+  "keywords": [
+    "image",
+    "crop",
+    "cropping",
+    "move",
+    "zoom",
+    "rotate",
+    "scale",
+    "cropper",
+    "cropperjs",
+    "cropper.js",
+    "html",
+    "css",
+    "javascript",
+    "front-end",
+    "web",
+    "development"
+  ],
+  "devDependencies": {
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-es2015": "^6.24.1",
+    "cssnano": "^3.10.0",
+    "eslint": "^4.1.1",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-import": "^2.2.0",
+    "node-qunit-phantomjs": "^1.5.0",
+    "npm-run-all": "^4.0.2",
+    "postcss-assets": "^4.1.0",
+    "postcss-cli": "^4.1.0",
+    "postcss-cssnext": "^3.0.0",
+    "rollup": "^0.43.0",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-watch": "^4.0.0",
+    "uglify-js": "^3.0.23"
+  },
+  "dependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-plugin-transform-es2015-modules-umd": "^6.24.1",
+    "babel-preset-env": "^1.5.2",
+    "qunitjs": "^2.3.3"
+  }
+}
